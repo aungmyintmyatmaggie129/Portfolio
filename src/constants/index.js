@@ -148,15 +148,15 @@ const techStackIcons = [
 const expCards = [
     {
         review:
-            "Adrian brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.",
+            "Build responsive user interfaces using Frontend Framework and MERN stack technologies, focusing on clean architecture and high performance.",
         imgPath: "/images/exp1.png",
         logoPath: "/images/logo1.png",
         title: "Frontend Developer",
         date: "2025 - Present",
         responsibilities: [
-            "Developed and maintained user-facing features for the Hostinger website.",
-            "Collaborated closely with UI/UX designers to ensure seamless user experiences.",
-            "Optimized web applications for maximum speed and scalability.",
+            "Built and maintained responsive, high-performing frontend features using React and modern JavaScript.",
+            "Collaborated with UI/UX designers to translate Figma wireframes into pixel-perfect, seamless user interfaces.",
+            "Enhanced web app loading speeds and responsiveness for maximum performance and scalability.",
         ],
     },
     {
