@@ -152,7 +152,7 @@ const expCards = [
         imgPath: "/images/exp1.png",
         logoPath: "/images/logo1.png",
         title: "Frontend Developer",
-        date: "January 2023 - Present",
+        date: "2025 - Present",
         responsibilities: [
             "Developed and maintained user-facing features for the Hostinger website.",
             "Collaborated closely with UI/UX designers to ensure seamless user experiences.",
@@ -161,28 +161,28 @@ const expCards = [
     },
     {
         review:
-            "Adrian’s contributions to Docker's web applications have been outstanding. He approaches challenges with a problem-solving mindset.",
+            "As a Risk Management Officer, I oversee transaction monitoring, investigating AML/CFT cases, fraud detection, and regulatory compliance to mitigate financial risk and preserve operational integrity.",
         imgPath: "/images/exp2.png",
         logoPath: "/images/logo2.png",
-        title: "Full Stack Developer",
-        date: "June 2020 - December 2023",
+        title: "Risk Management Officer",
+        date: "April 2025 - Present",
         responsibilities: [
-            "Led the development of Docker's web applications, focusing on scalability.",
-            "Worked with backend engineers to integrate APIs seamlessly with the frontend.",
-            "Contributed to open-source projects that were used with the Docker ecosystem.",
+            "Lead end-to-end investigations into complex fraud and AML/CFT cases, ensuring full compliance with (CBM) directives and legal frameworks.",
+            "Compile and submit comprehensive daily and monthly risk reports tracking flagged cases, audit findings, and fraud trends for executive review and regulatory audits.",
+            "Partner with internal operations, legal, and security teams to resolve escalated compliance issues, patch operational vulnerabilities, and refine risk mitigation protocols.",
         ],
     },
     {
         review:
-            "Adrian’s work on Appwrite’s mobile app brought a high level of quality and efficiency. He delivered solutions that enhanced our mobile experience & meet our product goals.",
+            "As an eKYC Data Entry Supervisor, I led and managed an operational team responsible for high-volume customer identity verification and document processing.",
         imgPath: "/images/exp3.png",
         logoPath: "/images/logo3.png",
-        title: "React Native Developer",
-        date: "March 2019 - May 2020",
+        title: "Data Entry Supervisor",
+        date: "July 2023 - April 2025",
         responsibilities: [
-            "Built cross-platform mobile apps using React Native, integrating with Appwrite's backend services.",
-            "Improved app performance and user experience through code optimization and testing.",
-            "Coordinated with the product team to implement features based on feedback.",
+            "Led and supervised a team of data entry specialists to consistently meet and exceed strict daily and monthly performance metrics.",
+            "Monitored verification workflows to maintain high data accuracy standards and full compliance with organizational guidelines.",
+            "Prepared detailed operational reports and tracked KPI metrics to evaluate team productivity and address performance gaps.",
         ],
     },
 ];
