@@ -18,7 +18,7 @@ const TechStack = () => {
                 start: 'top center'
             }
         })
-    })
+    });
 
     return (
         <div id='skills' className='skills pb-8 flex-center section-padding'>
@@ -29,7 +29,7 @@ const TechStack = () => {
                 />
 
                 <div className='tech-grid'>
-                    {techStackIcons.map((icon, idx) => (
+                    {/* {techStackIcons.map((icon, idx) => (
                         <div key={idx} className='card-border tech-card overflow-hidden group xl:rounded-full rounded-lg'>
                             <div className='tech-card-animated-bg' />
                             <div className='tech-card-content'>
@@ -41,10 +41,10 @@ const TechStack = () => {
                                 </div>
                             </div>
                         </div>
-                    ))}
-                    {/* This is Just Images rather than 3D 
-                    {techStackImgs.map((icon) => (
-                        <div key={icon.name} className='card-border tech-card overflow-hidden group xl:rounded-full rounded-lg'>
+                    ))} */}
+                    {/* This is Just Images rather than 3D  */}
+                    {techStackImgs.map((icon, idx) => (
+                        <div key={idx} className='card-border tech-card overflow-hidden group xl:rounded-full rounded-lg'>
                             <div className='tech-card-animated-bg' />
                             <div className='tech-card-content'>
                                 <div className='tech-icon-wrapper'>
@@ -55,7 +55,7 @@ const TechStack = () => {
                                 </div>
                             </div>
                         </div>
-                    ))} */}
+                    ))}
                 </div>
             </div>
         </div>

@@ -470,3 +470,8 @@ section {
 .card:hover::before {
   opacity: 1;
 }
+
+.btn-Capture{
+  
+  background-color: #fff;
+}

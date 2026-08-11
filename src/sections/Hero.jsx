@@ -8,13 +8,13 @@ import gsap from "gsap"
 const Hero = () => {
 
     useGSAP(() => {
-        gsap.fromTo('.hero-text h1', 
+        gsap.fromTo('.hero-text h1',
             {
                 y: 50,
                 opacity: 0
-            }, 
+            },
             {
-                y:0,
+                y: 0,
                 opacity: 1,
                 stagger: 0.2,
                 duration: 1,
@@ -37,7 +37,7 @@ const Hero = () => {
                                 Shaping
                                 <span className="slide">
                                     <span className="wrapper">
-                                        {words.map((word,idx) => (
+                                        {words.map((word, idx) => (
                                             <span key={idx} className="flex items-center  md:gap-3 gap-1 pb-2">
                                                 <img
                                                     src={word.imgPath}
@@ -64,11 +64,16 @@ const Hero = () => {
                 {/* RIGHT: 3d model */}
                 <figure>
                     <div className="hero-3d-layout">
-                        <HeroExperience/>
+                        {/* <HeroExperience/> */}
+                        <img
+                            src="/images/hero-room.png"
+                            alt="3D workspace"
+                            className="w-full h-full object-contain"
+                        />
                     </div>
                 </figure>
             </div>
-            <AnimatedCounter/>
+            <AnimatedCounter />
         </section>
     )
 }
