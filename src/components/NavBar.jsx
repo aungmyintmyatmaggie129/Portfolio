@@ -1,16 +1,20 @@
 import React, { useEffect, useState } from 'react'
 import { navLinks } from '../constants'
 
-const NavBar = () => {
-
+const NavBar = ({show3D, setShow3D}) => {
     const [scrolled, setScrolled] = useState(false);
+
+    //Set3D button
+    console.log(show3D)
+
+    // Set scroll behavior
     useEffect(() => {
         const handleScroll = () => {
             const isScrolled = window.scrollY > 10;
             setScrolled(true);
         }
         window.addEventListener('scroll', handleScroll);
-        return() => {
+        return () => {
             window.removeEventListener('scroll', handleScroll);
         }
     }, [])
@@ -23,7 +27,7 @@ const NavBar = () => {
                 </a>
                 <nav className='desktop'>
                     <ul>
-                        {navLinks.map(({link, name}, idx) => (
+                        {navLinks.map(({ link, name }, idx) => (
                             <li key={idx} className='group'>
                                 <a href={link}>
                                     <span>{name}</span>
@@ -33,11 +37,18 @@ const NavBar = () => {
                         ))}
                     </ul>
                 </nav>
-                <a href="#contact" className='contact-btn group'>
-                    <div className='inner'>
-                        <span>Contact me</span>
-                    </div>
-                </a>
+                <div className='flex justify-center items-center gap-4'>
+                    <button onClick={() => {setShow3D(!show3D)}} className='contact-btn group'>
+                        <div className='inner'>
+                            <span><i className={show3D? 'fa-solid fa-image' : 'fa-solid fa-cube'}></i></span>
+                        </div>
+                    </button>
+                    <a href="#contact" className='contact-btn group'>
+                        <div className='inner'>
+                            <span>Contact me</span>
+                        </div>
+                    </a>
+                </div>
             </div>
         </header>
     )

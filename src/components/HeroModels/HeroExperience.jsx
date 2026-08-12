@@ -9,19 +9,21 @@ const HeroExperience = () => {
     const isTablet = useMediaQuery({ query: '(max-width: 1024px)' });
     const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
 
-    const canvasRef = useRef();
 
-    const captureImage = () => {
-        const canvas = canvasRef.current;
+    {/* This is download capture function that transform 3d model into png */ }
+    // const canvasRef = useRef();
+    // const captureImage = () => {
+    //     const canvas = canvasRef.current;
 
-        const link = document.createElement('a');
-        link.download = 'hero-room.png';
-        link.href = canvas.toDataURL('image/png');
-        link.click();
-    };
+    //     const link = document.createElement('a');
+    //     link.download = 'hero-room.png';
+    //     link.href = canvas.toDataURL('image/png');
+    //     link.click();
+    // };
     return (
         <>
-        <button
+            {/* This is download capture btn that transform 3d model into png */}
+            {/* <button
             className='btn-Capture'
             onClick={captureImage}
             style={{
@@ -33,8 +35,10 @@ const HeroExperience = () => {
             }}
         >
             Capture
-        </button>
-            {/* <Canvas ref={canvasRef} camera={{ position: [0, 0, 15], fov: 45 }} gl={{ preserveDrawingBuffer: true }}>
+        </button> */}
+
+
+            <Canvas camera={{ position: [0, 0, 15], fov: 45 }} gl={{ preserveDrawingBuffer: true }}>
 
                 <OrbitControls
                     enablePan={false}
@@ -54,7 +58,7 @@ const HeroExperience = () => {
                         <Room />
                     </group>
                 </Center>
-            </Canvas> */}
+            </Canvas>
 
         </>
     )

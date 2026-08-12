@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import NavBar from './components/NavBar'
 import Hero from './sections/Hero'
 import ShowcaseSection from './sections/ShowcaseSection'
@@ -11,18 +11,20 @@ import ContactSection from './sections/ContactSection'
 import Footer from './sections/Footer'
 
 const App = () => {
+
+    const [show3D, setShow3D] = useState(true);
     return (
         <>
-            <NavBar/>
-            <Hero/>
-            <ShowcaseSection/>
-            <LogoSection/>
-            <FeatureCard/>
-            <ExperienceSection/>
-            <TechStack/>
-            <Testimonials/>
-            <ContactSection/>
-            <Footer/>
+            <NavBar show3D={show3D} setShow3D={setShow3D} />
+            <Hero show3D={show3D} setShow3D={setShow3D} />
+            <ShowcaseSection />
+            <LogoSection />
+            <FeatureCard />
+            <ExperienceSection />
+            <TechStack />
+            <Testimonials />
+            <ContactSection show3D={show3D} setShow3D={setShow3D} />
+            <Footer />
         </>
     )
 }

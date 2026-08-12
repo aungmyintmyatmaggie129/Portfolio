@@ -5,7 +5,7 @@ import { words } from "../constants"
 import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
 
-const Hero = () => {
+const Hero = ({show3D, setShow3D}) => {
 
     useGSAP(() => {
         gsap.fromTo('.hero-text h1',
@@ -64,12 +64,15 @@ const Hero = () => {
                 {/* RIGHT: 3d model */}
                 <figure>
                     <div className="hero-3d-layout">
-                        {/* <HeroExperience/> */}
-                        <img
+                        {
+                            show3D ? 
+                            (<HeroExperience/>):
+                            (<img
                             src="/images/hero-room.png"
                             alt="3D workspace"
                             className="w-full h-full object-contain"
                         />
+                        )}
                     </div>
                 </figure>
             </div>

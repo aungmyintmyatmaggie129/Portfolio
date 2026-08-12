@@ -3,7 +3,7 @@ import TitleHeader from '../components/TitleHeader'
 import ContactExperience from './ContactExperience'
 import emailjs from '@emailjs/browser';
 
-const ContactSection = () => {
+const ContactSection = ({ show3D, setShow3D }) => {
     const formRef = useRef(null);
     const [formData, setFormData] = useState({
         name: '',
@@ -21,7 +21,7 @@ const ContactSection = () => {
         })
     };
 
-    const handleSubmit = async(e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         //Handle form submission logic here
         try {
@@ -35,7 +35,7 @@ const ContactSection = () => {
             setFormData({ name: '', email: '', message: '' })
         } catch (error) {
             console.log('Email Error,', error)
-        }finally{
+        } finally {
             setLoading(false);
         }
 
@@ -111,7 +111,16 @@ const ContactSection = () => {
                     {/* 3D Experience Section */}
                     <div className='xl:col-span-7 min-h-96'>
                         <div className='w-full h-full bg-[#cd7c2e] hover:cursor-grab rounded-3xl overflow-hidden'>
-                            {/* <ContactExperience /> */}
+                            {show3D ? (
+                                <ContactExperience />
+                            ) :
+                                (
+                                    <img
+                                        src="/images/worksetup.png"
+                                        alt="3D workspace"
+                                        className="w-full h-full object-contain"
+                                    />
+                                )}
                         </div>
                     </div>
                 </div>
