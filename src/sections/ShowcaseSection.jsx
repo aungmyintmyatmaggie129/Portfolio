@@ -54,8 +54,8 @@ const ShowcaseSection = () => {
                             <img src="/images/project1.png" alt="Ryde" />
                         </div>
                         <div className='text-content'>
-                            <h2>Online Shopping Made Simple with a Powerful,<br/>
-                                User-Friendly E-Commerce Platform called XtraMarket</h2>
+                            <h2>Online Shopping Made Simple with a Powerful,
+                                E-Commerce Platform called XtraMarket</h2>
                             <p className='text-white-50 md:text-xl'>
                                 An app built with (MEN) Stack, EJS, & TailwindCSS for a fast, user,friendly experience.
                             </p>
