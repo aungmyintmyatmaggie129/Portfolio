@@ -29,10 +29,10 @@ const words = [
 ];
 
 const counterItems = [
-    { value: 2, suffix: "+", label: "Years of Experience" },
+    { value: 1, suffix: "+", label: "Years of Experience" },
     { value: 10000, suffix: "+", label: "Hours of Learning" },
     { value: 10, suffix: "+", label: "Technologies" },
-    { value: 10000, suffix: "+", label: "Lines of Code" },
+    { value: 6, suffix: "+", label: "Personal Project" },
 ];
 
 const logoIconsList = [
@@ -151,12 +151,12 @@ const expCards = [
             "Build responsive user interfaces using Frontend Framework and MERN stack technologies, focusing on clean architecture and high performance.",
         imgPath: "/images/exp1.png",
         logoPath: "/images/logo1.png",
-        title: "Frontend Developer",
+        title: "Junior Fullstack Developer",
         date: "2025 - Present",
         responsibilities: [
-            "Built and maintained responsive, high-performing frontend features using React and modern JavaScript.",
-            "Collaborated with UI/UX designers to translate Figma wireframes into pixel-perfect, seamless user interfaces.",
-            "Enhanced web app loading speeds and responsiveness for maximum performance and scalability.",
+            "Developed and maintained responsive web applications using React, JavaScript, Node.js, and Express.js.",
+            "Built and integrated RESTful APIs to connect frontend interfaces with backend services and databases.",
+            "Worked with MongoDB and MySQL to manage application data, database operations, and CRUD functionality.",
         ],
     },
     {
@@ -175,8 +175,8 @@ const expCards = [
     {
         review:
             "As an eKYC Data Entry Supervisor, I led and managed an operational team responsible for high-volume customer identity verification and document processing.",
-        imgPath: "/images/exp3.png",
-        logoPath: "/images/logo3.png",
+        imgPath: "/images/exp2.png",
+        logoPath: "/images/logo2.png",
         title: "Data Entry Supervisor",
         date: "July 2023 - April 2025",
         responsibilities: [
@@ -250,8 +250,8 @@ const testimonials = [
 const socialImgs = [
     {
         name: "insta",
-        url: "https://www.instagram.com/",
-        imgPath: "/images/insta.png",
+        url: "https://github.com/aungmyintmyatmaggie129/",
+        imgPath: "/images/github.png",
     },
     {
         name: "fb",

@@ -13,17 +13,30 @@ import Footer from './sections/Footer'
 const App = () => {
 
     const [show3D, setShow3D] = useState(true);
+    const [isSwitching, setIsSwitching] = useState(false);
+
+    const handleToggle3D = () => {
+        if (isSwitching) return;
+
+        setIsSwitching(true);
+
+        window.setTimeout(() => {
+            setShow3D((prev) => !prev);
+            setIsSwitching(false);
+        }, 2000);
+    };
+
     return (
         <>
-            <NavBar show3D={show3D} setShow3D={setShow3D} />
-            <Hero show3D={show3D} setShow3D={setShow3D} />
+            <NavBar show3D={show3D} isSwitching={isSwitching} onToggle3D={handleToggle3D} />
+            <Hero show3D={show3D} isSwitching={isSwitching} />
             <ShowcaseSection />
             <LogoSection />
             <FeatureCard />
             <ExperienceSection />
             <TechStack />
             <Testimonials />
-            <ContactSection show3D={show3D} setShow3D={setShow3D} />
+            <ContactSection show3D={show3D} setShow3D={setShow3D} isSwitching={isSwitching}/>
             <Footer />
         </>
     )

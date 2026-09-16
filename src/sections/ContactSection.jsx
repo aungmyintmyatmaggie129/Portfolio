@@ -1,9 +1,9 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import TitleHeader from '../components/TitleHeader'
 import ContactExperience from './ContactExperience'
 import emailjs from '@emailjs/browser';
 
-const ContactSection = ({ show3D, setShow3D }) => {
+const ContactSection = ({ show3D, setShow3D, isSwitching }) => {
     const formRef = useRef(null);
     const [formData, setFormData] = useState({
         name: '',
@@ -12,6 +12,21 @@ const ContactSection = ({ show3D, setShow3D }) => {
     });
 
     const [loading, setLoading] = useState(false);
+    // const [is3DLoading, setIs3DLoading] = useState(show3D);
+
+    // useEffect(() => {
+    //     if (!show3D) {
+    //         setIs3DLoading(false);
+    //         return;
+    //     }
+
+    //     setIs3DLoading(true);
+    //     const timer = window.setTimeout(() => {
+    //         setIs3DLoading(false);
+    //     }, 1800);
+
+    //     return () => window.clearTimeout(timer);
+    // }, [show3D]);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -110,17 +125,25 @@ const ContactSection = ({ show3D, setShow3D }) => {
                     </div>
                     {/* 3D Experience Section */}
                     <div className='xl:col-span-7 min-h-96'>
-                        <div className='w-full h-full bg-[#cd7c2e] hover:cursor-grab rounded-3xl overflow-hidden'>
+                        <div className='contact-visual w-full h-full bg-[#cd7c2e] hover:cursor-grab rounded-3xl overflow-hidden'>
                             {show3D ? (
-                                <ContactExperience />
-                            ) :
-                                (
-                                    <img
-                                        src="/images/worksetup.png"
-                                        alt="3D workspace"
-                                        className="w-full h-full object-contain"
-                                    />
-                                )}
+                                <>
+                                    
+                                    <ContactExperience />
+                                </>
+                            ) : (
+                                <img
+                                    src="/images/worksetup.png"
+                                    alt="3D workspace"
+                                    className="w-full h-full object-contain"
+                                />
+                            )}
+                            {isSwitching && (
+                            <div className='mode-transition-overlay'>
+                                <span className='mode-transition-spinner'></span>
+                                <p>{show3D ? 'Switching to Photo...' : 'Switching to 3D...'}</p>
+                            </div>
+                        )}
                         </div>
                     </div>
                 </div>

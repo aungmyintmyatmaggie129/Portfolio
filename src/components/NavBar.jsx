@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { navLinks } from '../constants'
 
-const NavBar = ({show3D, setShow3D}) => {
+const NavBar = ({show3D, isSwitching, onToggle3D}) => {
     const [scrolled, setScrolled] = useState(false);
-
-    //Set3D button
-    console.log(show3D)
 
     // Set scroll behavior
     useEffect(() => {
@@ -37,15 +34,32 @@ const NavBar = ({show3D, setShow3D}) => {
                         ))}
                     </ul>
                 </nav>
-                <div className='flex justify-center items-center gap-4'>
-                    <button onClick={() => {setShow3D(!show3D)}} className='contact-btn group'>
+                <div className='nav-actions'>
+                    <button
+                        type='button'
+                        onClick={onToggle3D}
+                        className={`contact-btn group ${isSwitching ? 'loading' : ''}`}
+                        disabled={isSwitching}
+                        aria-label={show3D ? 'Switch to normal photo mode' : 'Switch to 3D mode'}
+                    >
                         <div className='inner'>
-                            <span><i className={show3D? 'fa-solid fa-image' : 'fa-solid fa-cube'}></i></span>
+                            <span className='mode-toggle-content'>
+                                {isSwitching ? (
+                                    <i className='fa-solid fa-spinner mode-spinner'></i>
+                                ) : (
+                                    <i className={show3D ? 'fa-solid fa-image' : 'fa-solid fa-cube'}></i>
+                                )}
+                            </span>
                         </div>
                     </button>
                     <a href="#contact" className='contact-btn group'>
                         <div className='inner'>
                             <span>Contact me</span>
+                        </div>
+                    </a>
+                    <a href="/assets/Aung_Myint_Myat_CV_resume.pdf" download="Aung_Myint_Myat_CV_resume.pdf" className='contact-btn group'>
+                        <div className='inner'>
+                            <span><i className="fa-solid fa-file-arrow-down"></i></span>
                         </div>
                     </a>
                 </div>

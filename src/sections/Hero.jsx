@@ -5,7 +5,7 @@ import { words } from "../constants"
 import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
 
-const Hero = ({show3D, setShow3D}) => {
+const Hero = ({show3D, setShow3D, isSwitching}) => {
 
     useGSAP(() => {
         gsap.fromTo('.hero-text h1',
@@ -63,15 +63,22 @@ const Hero = ({show3D, setShow3D}) => {
                 </header>
                 {/* RIGHT: 3d model */}
                 <figure>
-                    <div className="hero-3d-layout">
-                        {
-                            show3D ? 
-                            (<HeroExperience/>):
-                            (<img
-                            src="/images/hero-room.png"
-                            alt="3D workspace"
-                            className="w-full h-full object-contain"
-                        />
+                    <div className={`hero-3d-layout ${isSwitching ? 'is-switching' : ''}`}>
+                        {show3D ? (
+                            <HeroExperience />
+                        ) : (
+                            <img
+                                src="/images/hero-room.png"
+                                alt="3D workspace"
+                                className="w-full h-full object-contain"
+                            />
+                        )}
+
+                        {isSwitching && (
+                            <div className='mode-transition-overlay'>
+                                <span className='mode-transition-spinner'></span>
+                                <p>{show3D ? 'Switching to Photo...' : 'Switching to 3D...'}</p>
+                            </div>
                         )}
                     </div>
                 </figure>
